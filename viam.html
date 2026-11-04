@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VIAM Real Estate | Premium Luxury Properties</title>
+<!-- FontAwesome Icons for Call, WhatsApp, Facebook, Instagram & Share -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root {
+--bg-color: #0d0d0d;
+--card-bg: #171717;
+--text-color: #FFFFFF;
+--gold-primary: #D4AF37;
+--gold-light: #F3E5AB;
+--gold-gradient: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+--gray-color: #262626;
+--light-gray: #A3A3A3;
+}
+
+body {
+font-family: 'Helvetica Neue', Arial, sans-serif;
+background-color: var(--bg-color);
+color: var(--text-color);
+margin: 0;
+padding: 0;
+overflow-x: hidden;
+}
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 40px;
+border-bottom: 1px solid var(--gray-color);
+background-color: rgba(13, 13, 13, 0.95);
+position: relative;
+z-index: 100;
+}
+
+.logo {
+font-size: 32px;
+font-weight: 900;
+background: var(--gold-gradient);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+letter-spacing: 4px;
+text-transform: uppercase;
+line-height: 1;
+display: inline-block;
+}
+
+.logo-sub {
+font-size: 7.5px;
+display: block;
+color: #FFFFFF;
+-webkit-text-fill-color: #FFFFFF;
+font-weight: 600;
+margin-top: 4px;
+white-space: nowrap;
+text-transform: uppercase;
+text-align: justify;
+text-align-last: justify;
+width: 100%;
+}
+
+.nav-box {
+display: flex;
+align-items: center;
+gap: 8px;
+background-color: var(--card-bg);
+border: 1px solid var(--gold-primary);
+padding: 4px 10px;
+border-radius: 4px;
+box-shadow: 0 0 6px rgba(212, 175, 55, 0.15);
+}
+
+.nav-box a {
+color: var(--gold-light);
+text-decoration: none;
+font-size: 10px;
+font-weight: 500;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+transition: color 0.3s ease;
+padding: 2px 4px;
+}
+
+.nav-box a:hover {
+color: #FFFFFF;
+}
+
+.hero {
+text-align: center;
+padding: 80px 20px 60px 20px;
+background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
+perspective: 1000px;
+overflow: hidden;
+}
+
+.carousel-container {
+width: 300px;
+height: 200px;
+margin: 0 auto 50px auto;
+position: relative;
+transform-style: preserve-3d;
+}
+
+.carousel {
+width: 100%;
+height: 100%;
+position: absolute;
+transform-style: preserve-3d;
+}
+
+.carousel-card {
+position: absolute;
+width: 300px;
+height: 200px;
+border: 1px solid var(--gold-primary);
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+background-size: cover;
+background-position: center;
+border-radius: 8px;
+overflow: hidden;
+backface-visibility: visible;
+cursor: pointer;
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-card:hover {
+border-color: #FFFFFF;
+box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+}
+
+.carousel-card h3 {
+background: rgba(0, 0, 0, 0.85);
+width: 100%;
+margin: 0;
+padding: 12px 0;
+font-size: 15px;
+color: var(--gold-light);
+text-transform: uppercase;
+letter-spacing: 1.5px;
+border-top: 1px solid var(--gold-primary);
+}
+
+.card-1 {
+transform: rotateY(0deg) translateZ(240px);
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=600');
+}
+.card-2 {
+transform: rotateY(72deg) translateZ(240px);
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=600');
+}
+.card-3 {
+transform: rotateY(144deg) translateZ(240px);
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1555636222-cae831e670b3?q=80&w=600');
+}
+.card-4 {
+transform: rotateY(216deg) translateZ(240px);
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=600');
+}
+.card-5 {
+transform: rotateY(288deg) translateZ(240px);
+background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=600');
+}
+
+.hero p {
+font-size: 20px;
+margin-bottom: 30px;
+color: var(--gold-light);
+letter-spacing: 1px;
+}
+
+/* Golden Keyword Search Section in Explore Area */
+.explore-search-container {
+max-width: 550px;
+margin: 0 auto;
+position: relative;
+display: flex;
+align-items: center;
+}
+
+.explore-search-wrapper {
+display: flex;
+width: 100%;
+background: var(--card-bg);
+border: 2px solid var(--gold-primary);
+border-radius: 30px;
+padding: 5px;
+box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+transition: all 0.3s ease;
+}
+
+.explore-search-wrapper:focus-within {
+box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+border-color: #FFF;
+}
+
+.explore-search-input {
+flex: 1;
+background: transparent;
+border: none;
+padding: 12px 20px;
+color: #FFFFFF;
+font-size: 14px;
+outline: none;
+letter-spacing: 0.5px;
+}
+
+.explore-search-input::placeholder {
+color: var(--gold-light);
+opacity: 0.7;
+}
+
+.explore-search-btn {
+background: var(--gold-gradient);
+color: #000000;
+border: none;
+padding: 12px 25px;
+border-radius: 25px;
+font-size: 13px;
+font-weight: 700;
+cursor: pointer;
+text-transform: uppercase;
+letter-spacing: 1px;
+display: flex;
+align-items: center;
+gap: 8px;
+transition: all 0.3s ease;
+}
+
+.explore-search-btn:hover {
+opacity: 0.9;
+transform: scale(1.02);
+box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+.btn {
+background: transparent;
+color: var(--gold-light);
+border: 2px solid var(--gold-primary);
+padding: 12px 30px;
+font-size: 14px;
+cursor: pointer;
+transition: all 0.4s ease;
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: 600;
+}
+
+.btn:hover {
+background: var(--gold-gradient);
+color: #000;
+border-color: transparent;
+}
+
+.search-filter {
+background-color: var(--card-bg);
+padding: 35px;
+display: flex;
+justify-content: center;
+gap: 20px;
+align-items: flex-end;
+border-bottom: 1px solid var(--gray-color);
+flex-wrap: wrap;
+}
+
+.filter-item {
+display: flex;
+flex-direction: column;
+}
+
+.filter-item label {
+margin-bottom: 8px;
+font-size: 13px;
+color: var(--gold-light);
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.filter-item select {
+padding: 12px;
+background-color: var(--bg-color);
+color: var(--text-color);
+border: 1px solid var(--gray-color);
+width: 190px;
+border-radius: 2px;
+font-size: 14px;
+}
+
+.filter-item select:focus {
+border-color: var(--gold-primary);
+outline: none;
+}
+
+.property-listing {
+padding: 80px 50px;
+}
+
+.property-listing h2 {
+text-align: center;
+font-size: 36px;
+margin-bottom: 50px;
+font-weight: 300;
+letter-spacing: 2px;
+}
+
+.property-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 30px;
+}
+
+.property-card {
+background-color: var(--card-bg);
+border: 1px solid var(--gray-color);
+padding: 20px;
+transition: transform 0.3s, border-color 0.3s;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.property-card:hover {
+border-color: var(--gold-primary);
+transform: translateY(-5px);
+}
+
+.property-card img {
+width: 100%;
+height: 230px;
+object-fit: cover;
+margin-bottom: 20px;
+}
+
+.property-card h3 {
+margin: 0 0 10px 0;
+font-size: 22px;
+font-weight: 400;
+}
+
+.price {
+background: var(--gold-gradient);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 22px;
+font-weight: bold;
+margin-bottom: 15px;
+}
+
+.property-details {
+font-size: 14px;
+color: var(--light-gray);
+margin-bottom: 20px;
+}
+
+/* Enhanced Social Share Button */
+.share-btn {
+background: transparent;
+color: var(--gold-light);
+border: 1px solid var(--gold-primary);
+padding: 8px 16px;
+font-size: 12px;
+cursor: pointer;
+border-radius: 4px;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 8px;
+transition: all 0.3s ease;
+width: fit-content;
+text-transform: uppercase;
+letter-spacing: 0.8px;
+}
+
+.share-btn i.fa-share-alt {
+margin-right: 2px;
+}
+
+.share-icons {
+display: inline-flex;
+gap: 6px;
+margin-left: 4px;
+font-size: 13px;
+}
+
+.share-btn:hover {
+background: var(--gold-gradient);
+color: #000000;
+border-color: transparent;
+box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+.services {
+padding: 80px 50px;
+background-color: #121212;
+text-align: center;
+border-top: 1px solid var(--gray-color);
+border-bottom: 1px solid var(--gray-color);
+}
+
+.services h2 {
+font-size: 36px;
+margin-bottom: 10px;
+font-weight: 300;
+letter-spacing: 2px;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 25px;
+margin-top: 50px;
+}
+
+.service-item {
+padding: 35px 20px;
+background-color: var(--card-bg);
+border: 1px solid var(--gray-color);
+transition: all 0.3s;
+}
+
+.service-item:hover {
+border-color: var(--gold-primary);
+}
+
+.service-item h3 {
+margin-top: 0;
+color: var(--gold-light);
+font-size: 20px;
+margin-bottom: 15px;
+}
+
+.service-item p {
+color: var(--light-gray);
+font-size: 14px;
+line-height: 1.6;
+}
+
+.bank-partners-section {
+margin-top: 60px;
+padding-top: 40px;
+border-top: 1px solid var(--gray-color);
+}
+
+.bank-partners-section h3 {
+font-size: 18px;
+color: var(--gold-light);
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 25px;
+font-weight: 400;
+}
+
+.bank-slider-container {
+width: 100%;
+overflow: hidden;
+background: rgba(23, 23, 23, 0.8);
+border: 1px solid var(--gray-color);
+border-radius: 8px;
+padding: 20px 0;
+position: relative;
+}
+
+.bank-slider-track {
+display: flex;
+width: calc(220px * 32);
+animation: bankScroll 40s linear infinite;
+}
+
+.bank-slider-container:hover .bank-slider-track {
+animation-play-state: paused;
+}
+
+.bank-card {
+width: 200px;
+margin: 0 10px;
+padding: 10px 15px;
+background: #ffffff;
+border: 1px solid var(--gray-color);
+border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+color: #111111;
+font-size: 13px;
+font-weight: 700;
+transition: all 0.3s ease;
+box-sizing: border-box;
+flex-shrink: 0;
+}
+
+.bank-card img {
+height: 28px;
+width: auto;
+max-width: 45px;
+object-fit: contain;
+}
+
+.bank-card:hover {
+border-color: var(--gold-primary);
+box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
+transform: scale(1.03);
+}
+
+@keyframes bankScroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(calc(-220px * 16)); }
+}
+
+.contact-form {
+padding: 80px 50px;
+max-width: 500px;
+margin: 0 auto;
+text-align: center;
+}
+
+.contact-form h2 {
+font-size: 36px;
+margin-bottom: 40px;
+font-weight: 300;
+letter-spacing: 2px;
+}
+
+.form-group {
+margin-bottom: 25px;
+text-align: left;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 8px;
+font-size: 13px;
+color: var(--gold-light);
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.form-group input {
+width: 100%;
+padding: 15px;
+background-color: var(--card-bg);
+color: var(--text-color);
+border: 1px solid var(--gray-color);
+box-sizing: border-box;
+font-size: 15px;
+}
+
+.form-group input:focus {
+border-color: var(--gold-primary);
+outline: none;
+}
+
+footer {
+text-align: center;
+padding: 30px;
+border-top: 1px solid var(--gray-color);
+color: var(--gold-light);
+font-size: 14px;
+letter-spacing: 1px;
+}
+
+.floating-buttons {
+position: fixed;
+bottom: 25px;
+right: 25px;
+display: flex;
+flex-direction: column;
+gap: 15px;
+z-index: 1000;
+}
+
+.float-btn {
+width: 55px;
+height: 55px;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--gold-light);
+font-size: 24px;
+text-decoration: none;
+background: rgba(23, 23, 23, 0.6);
+backdrop-filter: blur(8px);
+-webkit-backdrop-filter: blur(8px);
+border: 1.5px solid rgba(212, 175, 55, 0.6);
+transition: all 0.3s ease;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.float-btn:hover {
+transform: scale(1.1);
+background: rgba(212, 175, 55, 0.2);
+border-color: var(--gold-primary);
+color: #FFFFFF;
+box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.float-btn.whatsapp:hover {
+border-color: #25D366;
+color: #25D366;
+box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
+}
+
+.float-btn.call:hover {
+border-color: #D4AF37;
+color: #D4AF37;
+}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">
+VIAM
+<span class="logo-sub">REAL ESTATE</span>
+</div>
+
+<nav class="nav-box">
+<a href="#home">Home</a>
+<a href="#properties">Properties</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section id="home" class="hero">
+<div class="carousel-container">
+<div class="carousel" id="3dCarousel">
+<div class="carousel-card card-1" data-index="0">
+<h3>Find Your Luxury Home</h3>
+</div>
+<div class="carousel-card card-2" data-index="1">
+<h3>Find Your Land & Plot</h3>
+</div>
+<div class="carousel-card card-3" data-index="2">
+<h3>Find Your Shops & Malls</h3>
+</div>
+<div class="carousel-card card-4" data-index="3">
+<h3>Find Your Hotels & Resorts</h3>
+</div>
+<div class="carousel-card card-5" data-index="4">
+<h3>Find Your Homestays</h3>
+</div>
+</div>
+</div>
+<p>Experience elegance with VIAM Real Estate</p>
+
+<!-- Golden Keyword Search Bar in Explore Section -->
+<div class="explore-search-container">
+<div class="explore-search-wrapper">
+<input
+type="text"
+id="keywordSearchInput"
+class="explore-search-input"
+placeholder="Search by Keyword, Location, Property Type..."
+>
+<button class="explore-search-btn" onclick="executeSearch()">
+<i class="fas fa-search"></i> Explore
+</button>
+</div>
+</div>
+</section>
+
+<!-- Search & Filter Section -->
+<section class="search-filter">
+<div class="filter-item">
+<label>Property</label>
+<select id="filterProperty">
+<option value="">Property</option>
+<option value="buy">Buy</option>
+<option value="sell">Sell</option>
+<option value="rent-out">Rent Out</option>
+<option value="rent-in">Rent In</option>
+<option value="lease-out">Lease Out</option>
+<option value="lease-in">Lease In</option>
+</select>
+</div>
+
+<div class="filter-item">
+<label>Category</label>
+<select id="filterCategory">
+<option value="">Category</option>
+<option value="residential">Residential</option>
+<option value="commercial">Commercial</option>
+<option value="industrial">Industrial</option>
+<option value="others">Others</option>
+</select>
+</div>
+
+<div class="filter-item">
+<label>Location</label>
+<select id="filterLocation">
+<option value="">Location</option>
+<option value="sulthan-bathery">Sulthan Bathery</option>
+<option value="mananthavady">Mananthavady</option>
+<option value="kalpetta">Kalpetta</option>
+</select>
+</div>
+
+<div class="filter-item">
+<label>Sort By</label>
+<select id="filterSort">
+<option value="default">Sort By</option>
+<option value="price-low">Price: Low to High</option>
+<option value="price-high">Price: High to Low</option>
+</select>
+</div>
+
+<button class="btn" id="searchBtn">Search</button>
+</section>
+
+<section id="properties" class="property-listing">
+<h2>Properties in Wayanad</h2>
+<div class="property-grid">
+
+<!-- Property 1 -->
+<div class="property-card" data-property="sell" data-category="residential" data-location="kalpetta" data-price="12000000" data-keywords="luxury villa kalpetta residential 4 bed bath house">
+<div>
+<img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800" alt="Villa">
+<h3>Luxury Villa - Kalpetta</h3>
+<div class="price">₹1.2 Cr</div>
+<div class="property-details">Residential | 4 Bed | 4 Bath</div>
+</div>
+<button class="share-btn" onclick="shareProperty('Luxury Villa - Kalpetta', '₹1.2 Cr - Residential | 4 Bed | 4 Bath')">
+<i class="fas fa-share-alt"></i> Share
+<span class="share-icons">
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-whatsapp"></i>
+</span>
+</button>
+</div>
+
+<!-- Property 2 -->
+<div class="property-card" data-property="sell" data-category="commercial" data-location="sulthan-bathery" data-price="25000000" data-keywords="commercial complex sulthan bathery main road access shop space">
+<div>
+<img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800" alt="Commercial Space">
+<h3>Commercial Complex - Sulthan Bathery</h3>
+<div class="price">₹2.5 Cr</div>
+<div class="property-details">Commercial | Main Road Access</div>
+</div>
+<button class="share-btn" onclick="shareProperty('Commercial Complex - Sulthan Bathery', '₹2.5 Cr - Commercial | Main Road Access')">
+<i class="fas fa-share-alt"></i> Share
+<span class="share-icons">
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-whatsapp"></i>
+</span>
+</button>
+</div>
+
+<!-- Property 3 -->
+<div class="property-card" data-property="sell" data-category="others" data-location="mananthavady" data-price="8500000" data-keywords="resort plot mananthavady land nature view acres homestay">
+<div>
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800" alt="Resort Land">
+<h3>Resort Plot - Mananthavady</h3>
+<div class="price">₹85 Lakhs</div>
+<div class="property-details">Others | 1.5 Acres | Nature View</div>
+</div>
+<button class="share-btn" onclick="shareProperty('Resort Plot - Mananthavady', '₹85 Lakhs - 1.5 Acres | Nature View')">
+<i class="fas fa-share-alt"></i> Share
+<span class="share-icons">
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-whatsapp"></i>
+</span>
+</button>
+</div>
+
+<!-- Property 4 -->
+<div class="property-card" data-property="sell" data-category="residential" data-location="sulthan-bathery" data-price="1000000" data-keywords="budget house sulthan bathery residential 2 bed bath cents small home">
+<div>
+<img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800" alt="House in Bathery">
+<h3>Budget House - Sulthan Bathery</h3>
+<div class="price">₹10 Lakhs</div>
+<div class="property-details">Residential | 2 Bed | 2 Bath | 10 Cents</div>
+</div>
+<button class="share-btn" onclick="shareProperty('Budget House - Sulthan Bathery', '₹10 Lakhs - Residential | 2 Bed | 2 Bath | 10 Cents')">
+<i class="fas fa-share-alt"></i> Share
+<span class="share-icons">
+<i class="fab fa-facebook-f"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-whatsapp"></i>
+</span>
+</button>
+</div>
+
+</div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="services">
+<h2>Our Services</h2>
+<div class="services-grid">
+<div class="service-item">
+<h3>Buying</h3>
+<p>Expert guidance to help you find and purchase your ideal luxury property hassle-free.</p>
+</div>
+<div class="service-item">
+<h3>Selling</h3>
+<p>Strategic marketing and professional valuation to get maximum market value for your property.</p>
+</div>
+<div class="service-item">
+<h3>Rentals</h3>
+<p>A premium collection of high-end rental homes and commercial spaces for flexible stays.</p>
+</div>
+<div class="service-item">
+<h3>Leasing</h3>
+<p>Long-term commercial and residential leasing solutions tailored for high-value clients.</p>
+</div>
+<div class="service-item">
+<h3>Loan Facility</h3>
+<p>Seamless financial support and custom loan assistance with top banking partners.</p>
+</div>
+</div>
+
+<!-- Bank Partners Logo Slider -->
+<div class="bank-partners-section">
+<h3>Our Banking & Loan Partners</h3>
+<div class="bank-slider-container">
+<div class="bank-slider-track">
+<!-- Set 1 -->
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/State_Bank_of_India_logo.svg" alt="SBI Logo">
+<span>SBI</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" alt="HDFC Logo">
+<span>HDFC Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Axis_Bank_logo.svg" alt="Axis Logo">
+<span>Axis Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" alt="ICICI Logo">
+<span>ICICI Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Bank_of_Baroda_logo.svg" alt="BOB Logo">
+<span>Bank of Baroda</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Punjab_National_Bank_Logo.svg" alt="PNB Logo">
+<span>PNB</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Canara_Bank_Logo.svg" alt="Canara Logo">
+<span>Canara Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Federal_Bank_Logo.svg" alt="Federal Logo">
+<span>Federal Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Kotak_Mahindra_Bank_logo.svg" alt="Kotak Logo">
+<span>Kotak Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Union_Bank_of_India_logo.svg" alt="Union Logo">
+<span>Union Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/IndusInd_Bank_logo.svg" alt="IndusInd Logo">
+<span>IndusInd Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Indian_Bank_logo.svg" alt="Indian Bank Logo">
+<span>Indian Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/IDBI_Bank_Logo.svg" alt="IDBI Logo">
+<span>IDBI Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/85/YES_Bank_logo.svg" alt="YES Bank Logo">
+<span>YES Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/South_Indian_Bank_Logo.svg" alt="SIB Logo">
+<span>South Indian Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Dhanlaxmi_Bank_logo.svg" alt="Dhanlaxmi Logo">
+<span>Dhanlaxmi Bank</span>
+</div>
+
+<!-- Duplicate Set for Loop -->
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/State_Bank_of_India_logo.svg" alt="SBI Logo">
+<span>SBI</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg" alt="HDFC Logo">
+<span>HDFC Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/Axis_Bank_logo.svg" alt="Axis Logo">
+<span>Axis Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg" alt="ICICI Logo">
+<span>ICICI Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Bank_of_Baroda_logo.svg" alt="BOB Logo">
+<span>Bank of Baroda</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Punjab_National_Bank_Logo.svg" alt="PNB Logo">
+<span>PNB</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Canara_Bank_Logo.svg" alt="Canara Logo">
+<span>Canara Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Federal_Bank_Logo.svg" alt="Federal Logo">
+<span>Federal Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Kotak_Mahindra_Bank_logo.svg" alt="Kotak Logo">
+<span>Kotak Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Union_Bank_of_India_logo.svg" alt="Union Logo">
+<span>Union Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/IndusInd_Bank_logo.svg" alt="IndusInd Logo">
+<span>IndusInd Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Indian_Bank_logo.svg" alt="Indian Bank Logo">
+<span>Indian Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f6/IDBI_Bank_Logo.svg" alt="IDBI Logo">
+<span>IDBI Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/8/85/YES_Bank_logo.svg" alt="YES Bank Logo">
+<span>YES Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/South_Indian_Bank_Logo.svg" alt="SIB Logo">
+<span>South Indian Bank</span>
+</div>
+<div class="bank-card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Dhanlaxmi_Bank_logo.svg" alt="Dhanlaxmi Logo">
+<span>Dhanlaxmi Bank</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="contact-form">
+<h2>Contact Us</h2>
+<form>
+<div class="form-group">
+<label>Name</label>
+<input type="text" placeholder="Your Name" required>
+</div>
+<div class="form-group">
+<label>Contact Number</label>
+<input type="tel" placeholder="Your Contact Number" required>
+</div>
+<button class="btn" style="width: 100%;">Submit</button>
+</form>
+</section>
+
+<footer>
+<p>© 2026 VIAM Real Estate. All rights reserved.</p>
+</footer>
+
+<!-- Floating Action Buttons -->
+<div class="floating-buttons">
+<a href="tel:+918111915885" class="float-btn call" title="Call Us">
+<i class="fas fa-phone"></i>
+</a>
+<a href="https://wa.me/918111915885?text=Hello%20VIAM%20Real%20Estate,%20I%20am%20interested%20in%20your%20properties." class="float-btn whatsapp" target="_blank" title="WhatsApp Us">
+<i class="fab fa-whatsapp"></i>
+</a>
+</div>
+
+<script>
+const carousel = document.getElementById('3dCarousel');
+const cards = document.querySelectorAll('.carousel-card');
+
+let currentRotation = 0;
+let isTransitioning = false;
+const totalCards = 5;
+const angleStep = 360 / totalCards;
+
+function animateRotation() {
+if (!isTransitioning) {
+currentRotation -= 0.15;
+carousel.style.transition = 'none';
+carousel.style.transform = rotateY(${currentRotation}deg)`;
+}
+requestAnimationFrame(animateRotation);
+}
+
+animateRotation();
+
+cards.forEach(card => {
+card.addEventListener('click', function() {
+isTransitioning = true;
+
+const cardIndex = parseInt(this.getAttribute('data-index'));
+const targetAngle = -cardIndex * angleStep;
+
+const modCurrent = currentRotation % 360;
+let diff = (targetAngle - modCurrent) % 360;
+
+if (diff < -180) diff += 360;
+if (diff > 180) diff -= 360;
+
+currentRotation += diff;
+
+carousel.style.transition = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+carousel.style.transform = rotateY(${currentRotation}deg)`;
+
+setTimeout(() => {
+isTransitioning = false;
+}, 1200);
+});
+});
+
+// Combined Search & Keyword Filtering Logic
+function executeSearch() {
+const keyword = document.getElementById('keywordSearchInput').value.toLowerCase().trim();
+const selectedProperty = document.getElementById('filterProperty').value;
+const selectedCategory = document.getElementById('filterCategory').value;
+const selectedLocation = document.getElementById('filterLocation').value;
+const selectedSort = document.getElementById('filterSort').value;
+
+const propertyCards = Array.from(document.querySelectorAll('.property-card'));
+
+propertyCards.forEach(card => {
+const cardProperty = card.getAttribute('data-property');
+const cardCategory = card.getAttribute('data-category');
+const cardLocation = card.getAttribute('data-location');
+const cardKeywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+const cardText = card.textContent.toLowerCase();
+
+const matchProperty = !selectedProperty || cardProperty === selectedProperty;
+const matchCategory = !selectedCategory || cardCategory === selectedCategory;
+const matchLocation = !selectedLocation || cardLocation === selectedLocation;
+const matchKeyword = !keyword || cardKeywords.includes(keyword) || cardText.includes(keyword);
+
+if (matchProperty && matchCategory && matchLocation && matchKeyword) {
+card.style.display = 'flex';
+} else {
+card.style.display = 'none';
+}
+});
+
+const grid = document.querySelector('.property-grid');
+if (selectedSort === 'price-low') {
+propertyCards.sort((a, b) => parseFloat(a.getAttribute('data-price')) - parseFloat(b.getAttribute('data-price')));
+} else if (selectedSort === 'price-high') {
+propertyCards.sort((a, b) => parseFloat(b.getAttribute('data-price')) - parseFloat(a.getAttribute('data-price')));
+}
+
+propertyCards.forEach(card => grid.appendChild(card));
+
+// Scroll down to properties section on search
+document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+}
+
+// Live search on typing in the keyword input
+document.getElementById('keywordSearchInput').addEventListener('keyup', function(e) {
+executeSearch();
+});
+
+// Filter button click event
+document.getElementById('searchBtn').addEventListener('click', executeSearch);
+
+function shareProperty(title, details) {
+const shareData = {
+title: 'VIAM Real Estate - ' + title,
+text: Check out this property on VIAM Real Estate:\n\n🏡 *${title}*\n💰 Details:${details}\n\nContact us for more info!,
+url: window.location.href
+};
+
+if (navigator.share) {
+navigator.share(shareData)
+.then(() => console.log('Successfully shared'))
+.catch((error) => console.log('Error sharing', error));
+} else {
+const whatsappUrl = https://wa.me/?text=${encodeURIComponent(shareData.text + '\n' + shareData.url)};
+window.open(whatsappUrl, '_blank');
+}
+}
+</script>
+</body>
+</html>
